@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="{%static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Job Portal</title>
-    <script src="{%static 'ckeditor/ckeditor.js' %}"><script>
+    <script src="{%static 'plugin/ckeditor/ckeditor.js' %}"><script>
   </head>
   <body>
 
@@ -31,14 +31,14 @@
         <li><a href="/">Home</a></li>
         <li><a class="active" href="/dashboard">Dashboard</a></li>
         <li><i class="fas fa-book"></i></li>
-        <li><i class="fas fa-plus"></i></li>
+       <li id="myBtn"><i class="fas fa-plus"></i></li>
       </ul>
     </nav>
 
 <h2>HTML Table</h2>
 <div class='container'>
     <table>
-        <h2>Google</h2>
+        <h2 class='head' style='padding: 20px 0px;'>Google</h2>
         <tr>
           <th>status</th>
           <th>Question</th>
@@ -89,8 +89,42 @@
         
       </table>
       <div id="piechart" style='float:right'></div>
+         <h2 class='head'  style='padding: 20px 0px;'>Popular Articles</h2>
+        <div class="bg-light p-5 rounded">
+    <h3>Google SDE II ROLE , FULL TIME</h3>
+    <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport.....</p>
+    <a class="btn btn-lg btn-primary" href="#" role="button">Read More &raquo;</a>
+  </div>
       
 </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <textarea name='content'></textarea>
+  </div>
+
+</div>
+  <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>CKEDITOR.replace('content')</script>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 

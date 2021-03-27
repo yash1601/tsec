@@ -222,3 +222,16 @@ html{
         text-decoration: none;
         cursor: pointer;
       }
+      .save {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .save:hover,
+      .save:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
